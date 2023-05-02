@@ -1,0 +1,287 @@
+root@student7-virtual-machine:~/바탕화면# nano /etc/passwd
+root@student7-virtual-machine:~/바탕화면# nano /etc/shadow
+root@student7-virtual-machine:~/바탕화면# nano /etc/group
+root@student7-virtual-machine:~/바탕화면# adduser student7
+adduser: 'student7' 사용자는 이미 존재합니다.
+root@student7-virtual-machine:~/바탕화면# adduser student71
+'student71' 사용자를 추가 중...
+새 그룹 'student71' (1001) 추가 ...
+새 사용자 'student71' (1001) 을(를) 그룹 'student71' (으)로 추가 ...
+'/home/student71' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+student71의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: polytech1
+	방 번호 []: 509
+	직장 전화번호 []: 02-333-5555
+	집 전화번호 []: 02-777-7777
+	기타 []: student
+정보가 올바릅니까? [Y/n] y
+root@student7-virtual-machine:~/바탕화면# nano /etc/passwd
+root@student7-virtual-machine:~/바탕화면# adduser --uid 1111 student2
+'student2' 사용자를 추가 중...
+새 그룹 'student2' (1111) 추가 ...
+새 사용자 'student2' (1111) 을(를) 그룹 'student2' (으)로 추가 ...
+'/home/student2' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+student2의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student7-virtual-machine:~/바탕화면# student3
+student3: 명령을 찾을 수 없습니다
+root@student7-virtual-machine:~/바탕화면# adduser --gid 1000 student3
+'student3' 사용자를 추가 중...
+새 사용자 'student3' (1002) 을(를) 그룹 'student7' (으)로 추가 ...
+'/home/student3' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+student3의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student7-virtual-machine:~/바탕화면# tail /etc/passwd
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+student7:x:1000:1000:student7,,,:/home/student7:/bin/bash
+student71:x:1001:1001:polytech1,509,02-333-5555,02-777-7777,student:/home/student71:/bin/bash
+student2:x:1111:1111:,,,:/home/student2:/bin/bash
+student3:x:1002:1000:,,,:/home/student3:/bin/bash
+root@student7-virtual-machine:~/바탕화면# adduser --home /newhome student4
+'student4' 사용자를 추가 중...
+새 그룹 'student4' (1002) 추가 ...
+새 사용자 'student4' (1003) 을(를) 그룹 'student4' (으)로 추가 ...
+'/newhome' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+student4의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student7-virtual-machine:~/바탕화면# tail /etc/passwd
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+student7:x:1000:1000:student7,,,:/home/student7:/bin/bash
+student71:x:1001:1001:polytech1,509,02-333-5555,02-777-7777,student:/home/student71:/bin/bash
+student2:x:1111:1111:,,,:/home/student2:/bin/bash
+student3:x:1002:1000:,,,:/home/student3:/bin/bash
+student4:x:1003:1002:,,,:/newhome:/bin/bash
+root@student7-virtual-machine:~/바탕화면# login
+student7-virtual-machine 로그인: student4
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+student4@student7-virtual-machine:~$ logout
+root@student7-virtual-machine:~/바탕화면# adduser --shell/bin/csh student5
+Unknown option: shell/bin/csh
+adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]
+[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]
+[--disabled-password] [--disabled-login] [--add_extra_groups]
+[--encrypt-home] USER
+   일반 사용자를 추가합니다
+
+adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]
+[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-password]
+[--disabled-login] [--add_extra_groups] USER
+   시스템 사용자를 추가합니다
+
+adduser --group [--gid ID] GROUP
+addgroup [--gid ID] GROUP
+   사용자 그룹을 추가합니다
+
+addgroup --system [--gid ID] GROUP
+   시스템 그룹을 추가합니다
+
+adduser USER GROUP
+   존재하는 사용자를 존재하는 그룹에 추가합니다
+
+일반 옵션:
+  --quiet | -q      실행 정보를 표준 출력으로 내보내지 않습니다
+  --force-badname   NAME_REGEX[_SYSTEM] 구성 변수애
+                    맞지 않는 사용자명을 허용합니다
+  --extrausers      기타 사용자를 데이터베이스로 사용합니다
+  --help | -h       사용법 메시지
+  --version | -v    버전 숫자와 저작권
+  --conf | -c FILE  FILE을 구성 파일로 사용합니다
+
+root@student7-virtual-machine:~/바탕화면# adduser --shell /bin/csh student5
+'student5' 사용자를 추가 중...
+새 그룹 'student5' (1003) 추가 ...
+새 사용자 'student5' (1004) 을(를) 그룹 'student5' (으)로 추가 ...
+useradd: Warning: missing or non-executable shell '/bin/csh'
+'/home/student5' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+student5의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student7-virtual-machine:~/바탕화면# tail /etc/group
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:student7
+student7:x:1000:
+sambashare:x:136:student7
+student71:x:1001:
+student2:x:1111:
+student4:x:1002:
+student5:x:1003:
+root@student7-virtual-machine:~/바탕화면# passwd student1
+passwd: 'student1' 사용자가 없습니다
+root@student7-virtual-machine:~/바탕화면# passwd student71
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+root@student7-virtual-machine:~/바탕화면# login
+student7-virtual-machine 로그인: student71
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+student71@student7-virtual-machine:~$ logout
+root@student7-virtual-machine:~/바탕화면# --shell /bin/csh student71
+--shell: 명령을 찾을 수 없습니다
+root@student7-virtual-machine:~/바탕화면# usermod --shell /bin/csh student71
+root@student7-virtual-machine:~/바탕화면# usermod --groups student7
+Usage: usermod [options] LOGIN
+
+Options:
+  -b, --badnames                allow bad names
+  -c, --comment COMMENT         new value of the GECOS field
+  -d, --home HOME_DIR           new home directory for the user account
+  -e, --expiredate EXPIRE_DATE  set account expiration date to EXPIRE_DATE
+  -f, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -g, --gid GROUP               force use GROUP as new primary group
+  -G, --groups GROUPS           new list of supplementary GROUPS
+  -a, --append                  append the user to the supplemental GROUPS
+                                mentioned by the -G option without removing
+                                the user from other groups
+  -h, --help                    display this help message and exit
+  -l, --login NEW_LOGIN         new value of the login name
+  -L, --lock                    lock the user account
+  -m, --move-home               move contents of the home directory to the
+                                new location (use only with -d)
+  -o, --non-unique              allow using duplicate (non-unique) UID
+  -p, --password PASSWORD       use encrypted password for the new password
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -s, --shell SHELL             new login shell for the user account
+  -u, --uid UID                 new UID for the user account
+  -U, --unlock                  unlock the user account
+  -v, --add-subuids FIRST-LAST  add range of subordinate uids
+  -V, --del-subuids FIRST-LAST  remove range of subordinate uids
+  -w, --add-subgids FIRST-LAST  add range of subordinate gids
+  -W, --del-subgids FIRST-LAST  remove range of subordinate gids
+  -Z, --selinux-user SEUSER     new SELinux user mapping for the user account
+
+root@student7-virtual-machine:~/바탕화면# usermod --groups student7 student71
+root@student7-virtual-machine:~/바탕화면# nano /etc/passwd
+root@student7-virtual-machine:~/바탕화면# nano /etc/group
+root@student7-virtual-machine:~/바탕화면# ls /home
+student2  student3  student5  student7  student71  t2.txt  t5.txt
+root@student7-virtual-machine:~/바탕화면# ls /
+apple  bin  boot  cdrom  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  melon  mnt  newhome  opt  proc  root  run  sbin  snap  srv  swapfile  sys  tmp  usr  var
+root@student7-virtual-machine:~/바탕화면# userdel -r student5
+userdel: student5 mail spool (/var/mail/student5) not found
+root@student7-virtual-machine:~/바탕화면# ls /home
+student2  student3  student7  student71  t2.txt  t5.txt
+root@student7-virtual-machine:~/바탕화면# nano /etc/passwd
+root@student7-virtual-machine:~/바탕화면# 
